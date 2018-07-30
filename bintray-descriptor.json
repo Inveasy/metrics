@@ -1,0 +1,32 @@
+{
+  "package": {
+    "name": "metrics",
+    "repo": "maven",
+    "subject": "inveasy",
+    "desc": "Annotations and utilities to provide method-level metrics and monitoring, made for Inveasy framework",
+    "website_url": "",
+    "issue_tracker_url": "https://github.com/Inveasy/metrics/issues",
+    "vcs_url": "https://github.com/Inveasy/metrics.git",
+    "github_use_tag_release_notes": true,
+    "github_release_notes_file": "RELEASE.txt",
+    "licenses": ["Apache-2.0"],
+    "labels": [],
+    "public_download_numbers": true,
+    "public_stats": true,
+    "attributes": []
+  },
+  "version": {
+    "name": "1.0.0",
+    "desc": "First public release",
+    "released": "2018-07-30",
+    "vcs_tag": "1.0.0",
+    "attributes": [],
+    "gpgSign": false
+  },
+  "files":
+  [
+    {"includePattern": "target/(.*\.jar)", "uploadPattern": "io/inveasy/metrics/1.0.0/$1"},
+    {"includePattern": "pom.xml", "uploadPattern": "io/inveasy/metrics/1.0.0/metrics-1.0.0.pom"}
+  ],
+  "publish": true
+}
