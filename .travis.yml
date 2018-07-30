@@ -2,18 +2,16 @@ language: java
 addons:
   sonarcloud:
     organization: inveasy
-
 script:
 - mvn clean install sonar:sonar -Dsonar.login=${SONAR_LOGIN} -B -V
 cache:
   directories:
   - "$HOME/.m2/repository"
   - "$HOME/.sonar/cache"
-
 deploy:
 - provider: releases
   api_key:
-    secure: RtWJV67ude8HHaWnS0QUT7yWisDTwpQMz4ryV2eL/qTeM1AkNe0Lbmm000mbXVukioWff6dP90Gs7dOwfROgLnpHLKnMI5XO9kAVk1uMJxd7/q1GT24WU97Sl6UxJz/mFJpzY14amStbhdvPTXGB9cdGmACZQI5kgBhV8BXu4WXfL3w14qZUEsJ+zI5mUwBT9AKpmMQrTbSxN/wHVG0DZbVxx7OZpSgTd09qHvhla3jKqpD4eJ/q5NYiSBkgXrHbgmbbdZEWaNAeDMN/1lRvU3CnXDwAKWNgH810h+ep0uDJxM3uh1/yiBzwsFG5E6IrR26SOffhKEun7UtHJZrvACinY9EQzHd/99Bsv+06CtLI3qSu7599ZqhjGEGiEi9gBabfSBb+PBDBUymNfeet9tdrsPOu05PaEczvEmrNOC7sKVBijn0ZtvL7HXckga6+btFC2TmuMpFqT4ejETIQh0sAe1dlWoU05+1INwh6apObfxcaINsbAsWk+R38rDnvFGb9Fm6TsfcwuAey3AqiCI+YN7xnvErpRSbFagArZJi/2Ycmu0UEEHC1PJ085xzBU9asGpcN5ri08wzqM4YMy1fOumZfMfXzoL/+bM3BQu3kdzoo6pj9uOP+qMlwvqi4JcwHH+S/4g/Hw2l/DaaIiJPDBOUINLU/fE2Udrr0a1I=
+    secure: CL25HvzxT2nLiTOcCKa+NMw2dMetcxbFURWO+uVkl6PQbqlqAaS7/qmdoCIKJzAGBZABSsM5bvdEoicmJi1n7n4PhTCoEqc+489V00z/yZWkC9yMg3W1pW2nWmZyHlFSUm3RULMQ7GzDKFtONp5mKbxfpo9aUCDlH/ypAPsAqx+faEMKn8BWQGy5g/2G3IAZFfJOp2xAjGnogxFyrhBdk5GaoRDy7ZBl6nQxEh/i95ZnsLFp0OdJHUFO5ag3WnXpY5V0yG27f8JDVtuSbazoiFd5/zMX+jXrwbAMkNhaneUGPm1dGrkxWcIC0p/ugu8+aaza3ZxOJcyr45kQmHUuNsfHiqiugrApJpTFIE0cXLA6WG3PVPlawaB7hJCRKwGb2+LOTFrwFI8HWbj/sTina//F/J2TIdXihbWRY9DXB8MsoHInRNIrFmeRwgK4PmrqtrWn5wa3gPRinjfEdY+LJmhE0xNAa/Jd8KHklMU5QcZ79hmoqiOdo6+xN9/T8+pYQnjp2DOwEv8xGUv5h7iBAN4Nwni10PENq/19tH9J/dQoBJ68N/jO9LFRLZ4U8wwo4tbHhyYsfvztu6R45j+NZ1C1y2JQv0/yzpoOsV5h1fUeIEYBMmLJ6o55tYYegXcWQnNmlo5jNhP1G7CsgGQWunRIH6zy7crr8auKkH/Qoi4=
   file_glob: true
   file: target/*.jar
   skip_cleanup: true
